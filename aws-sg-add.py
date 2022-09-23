@@ -1,5 +1,5 @@
-## Script para adicionar permissão de IP no Grupo de Segurança de uma instância EC2 no Amazon Web Services(EC2) ##
-## Versão 1.1
+## Script para adicionar permissão de IP no Grupo de Segurança de uma instância EC2 no Amazon Web Services(AWS) ##
+## Versão 1.2.1
 ## Adriano Baumart
 ## Data: 22/09/2022
 import os
@@ -33,7 +33,6 @@ while True:
         # insere a instância na lista de liberação
         if codigo == sg:
             sgs.append(valor['sg_id'])
-            print(sgs)
 print('!' *35)
 confirma = str(input('CONFIRMA A LIBERAÇÃO DO IP? [S/N]: ').upper().strip())
 if confirma == 'S':
