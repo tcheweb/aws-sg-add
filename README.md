@@ -11,7 +11,6 @@
 - Renomeie o arquivo **instances_modelo.json** para **instances.json** e insira as VM´s com os respectivos Security Group Id´s  
 - Execute o aws-sg-add.bat  
 
-
 #### Release Notes ####
 
 2.0.0 - 2022-09-25

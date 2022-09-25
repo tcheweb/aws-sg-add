@@ -36,7 +36,7 @@ while True:
         # insere a instância na lista de liberação
         if codigo == sg:
             sgs.append(valor['sg_id'])
-print('!' *35)
+print('!' *40)
 while True:
     confirma = str(input(f'CONFIRMA A LIBERAÇÃO DO IP {ip}? [S/N]: ').upper().strip())
     if confirma == 'S':
