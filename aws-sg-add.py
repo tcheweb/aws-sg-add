@@ -13,13 +13,13 @@ sgs = list()
 # Pegando o endereço IP válido
 url = 'https://checkip.amazonaws.com/'
 checkip = requests.get(url)
-meuip = str(checkip.text)
+meuip = str(checkip.text).strip()
 
 print('-' * 55)
 print('### PERMISSÕES EM GRUPOS DE SEGURANÇA EC2 - AWS ####')
 print('-' * 55)
-print(f'Meu IP: {meuip}')
-ip = str(input(f'Informe o IP (ENTER para meu IP): '))
+
+ip = str(input(f'Informe o IP (ENTER para {meuip}): '))
 if ip == '':
     ip = meuip
 
@@ -40,14 +40,25 @@ print('!' *40)
 while True:
     confirma = str(input(f'CONFIRMA A LIBERAÇÃO DO IP {ip}? [S/N]: ').upper().strip())
     if confirma == 'S':
+        # Inicia a execução do comando.
         os.system('cls')
         print('Iniciando...')
         for item in sgs:
-            comando = f'aws ec2 authorize-security-group-ingress --group-id {item} --protocol tcp --port 22 --cidr {ip}/32'
+            comando = f'aws ec2 authorize-security-group-ingress --group-id {item} --protocol tcp --port 22 --cidr {ip}/32 > response.json'
+            # executa e grava o retorno no arquivo response.json
             os.system(comando)
-            print('CONCLUÍDO')
+            # validação da execução
+            file2 = open('response.json')
+            retorno = json.load(file2)
+            file.close()
+            if retorno['Return'] == True:
+                print(f'IP Liberado com sucesso!')
+            else:
+                print('Falha ao autorizar acesso!')
         break
     elif confirma == 'N':
         break
     else:
         print('Opção inválida!')
+
+

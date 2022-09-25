@@ -12,8 +12,10 @@
 - Execute o aws-sg-add.bat  
 
 #### Release Notes ####
+3.0.0 - 2022-09-25
+- Implementado tratamento do retorno
 
-2.0.0 - 2022-09-25
+2.0.0 - 2022-09-24
 - Incluída validação da resposta de confirmação de execução
 - Opção de utilizar o IP do usuário sem precisar digitar
 - Ajustes visuais diversos
