@@ -12,8 +12,10 @@
 - Execute o aws-sg-add.bat  
 
 #### Release Notes ####
-3.0.0 - 2022-09-25
-- Implementado tratamento do retorno
+3.0.0 - 2022-09-28
+- Implementado avaliação do retorno de requisição
+- Melhoria de código
+- Incluído tratamento de exceções
 
 2.0.0 - 2022-09-24
 - Incluída validação da resposta de confirmação de execução
