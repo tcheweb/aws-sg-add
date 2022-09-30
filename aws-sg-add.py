@@ -63,7 +63,6 @@ while True:
     confirma = str(input(f'CONFIRMA A LIBERAÇÃO DO IP {ip}? [S/N]: ').upper().strip())
     if confirma == 'S':
         # Inicia a execução do comando.
-        os.system('cls')
         print('Iniciando...')
         for item in sgs:
             comando = f'aws ec2 authorize-security-group-ingress --group-id {item} --protocol tcp --port 22 --cidr {ip}/32 > response.json'

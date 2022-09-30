@@ -30,6 +30,9 @@ Pull requests são bem vindos. Para mudanças grandes, abra uma Issue primeiro p
 
 
 #### Release Notes ####
+v3.1.1 - 2022-09-30
+- Corrida chamada do app no arquivo aws-sg-add.sh
+
 v3.1.0 - 2022-09-30
 - Verificação se o AWS Cli está instalado
 - incluído ads-sg-add.sh
