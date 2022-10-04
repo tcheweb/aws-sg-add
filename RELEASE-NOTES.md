@@ -1,4 +1,7 @@
 #### Release Notes ####
+v4.0.0 - 2022-10-04
+- Adicionada liberação de instâncias RDS
+
 v3.2.0 - 2022-10-03
 - Status da autorização por VM durante a autorização.
 

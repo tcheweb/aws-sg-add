@@ -1,4 +1,4 @@
-### Script para adicionar permissão de IP no Grupo de Segurança de uma instância EC2 no Amazon Web Services(EC2) ###
+## Script para adicionar permissão de IP no Grupo de Segurança de uma instância EC2 ou RDS no Amazon Web Services(EC2) ##
 
 #### Pré-Requisitos ####  
 - Python3
@@ -9,12 +9,12 @@
 
 #### Instalação ####  
 - git clone https://github.com/tcheweb/aws-sg-add.git
-- Renomeie o arquivo **instances_modelo.json** para **instances.json** e insira as VM´s com os respectivos Security Group Id´s  
+- Renomeie o arquivo **instances_modelo.json** para **instances.json** e insira as VM´s com os respectivos Security Group Id´s e portas 
 - Execute o aws-sg-add.bat  
 
 ### Uso ###
-Este script deve ser usado com crontab. Especifique a frequência
-```bash
+Este script pode ser usado com crontab no Linux ou agendador de tarefas no Windows. Especifique a frequência  
+```bash  
 # ┌───────────── minut0 (0 - 59)
 # │ ┌───────────── hora (0 - 23)
 # │ │ ┌───────────── dia do mês (1 - 31)
@@ -25,5 +25,5 @@ Este script deve ser usado com crontab. Especifique a frequência
 # │ │ │ │ │ │
 # * * * * * /bin/bash {local do script}
 ```
-#### Contribuições ####
-Pull requests são bem vindos. Para mudanças grandes, abra uma Issue primeiro para avaliarmos o que você deseja mudar.
+#### Contribuições / Sugestões ####  
+Sugestões são bem vindas. Faça através de Issues.  
