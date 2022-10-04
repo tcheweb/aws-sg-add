@@ -2,7 +2,8 @@
   "instances":[
     {
       "instance": "NOME DA INSTÂNCIA",
-      "sg_id": "sg-9999999"
+      "sg_id": "sg-9999999",
+      "port": "SSH=22, mysql=3306 ou postgre=5432"
     }
     ]
 }

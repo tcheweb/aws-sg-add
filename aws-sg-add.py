@@ -1,7 +1,6 @@
-###   Script para adicionar permissão de IP no Grupo de Segurança de uma instância EC2 no Amazon Web Services(AWS) ##
-###   Versão: 3.1.0
+###   Script para adicionar permissão de IP no Grupo de Segurança de uma instância EC2 ou RDS no Amazon Web Services(AWS) ##
 ###   Adriano Baumart
-###   Criação: 22/09/2022    ###   Atualizado: 03/10/2022
+###   Criação: 22/09/2022    ###   Atualizado: 04/10/2022
 import os
 import json
 import requests
@@ -57,6 +56,7 @@ while True:
             if codigo == sg:
                 sgs.append(valor['instance'])
                 sgs.append(valor['sg_id'])
+                sgs.append(valor['port'])
 
 while True:
     print('!' * 40)
@@ -64,9 +64,9 @@ while True:
     if confirma == 'S':
         # Inicia a execução do comando.
         print('Iniciando...')
-        for cont in range(1, len(sgs), 2):
+        for cont in range(1, len(sgs), 3):
             print(f'Liberando {ip} em {sgs[cont-1]} ')
-            comando = f'aws ec2 authorize-security-group-ingress --group-id {sgs[cont]} --protocol tcp --port 22 --cidr {ip}/32 > response.json'
+            comando = f'aws ec2 authorize-security-group-ingress --group-id {sgs[cont]} --protocol tcp --port {sgs[cont+1]} --cidr {ip}/32 > response.json'
             # executa e grava o retorno no arquivo response.json
             try:
                 # verificando se o AWS Cli está instalado
