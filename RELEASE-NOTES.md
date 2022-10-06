@@ -1,4 +1,8 @@
 #### Release Notes ####
+
+v4.1.0 - 2022-10-05
+- Melhorias de usabilidade
+
 v4.0.0 - 2022-10-04
 - Adicionada liberação de instâncias RDS
 

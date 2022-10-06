@@ -2,14 +2,14 @@
     "Return": true,
     "SecurityGroupRules": [
         {
-            "SecurityGroupRuleId": "sgr-09d9fb127e0634946",
-            "GroupId": "sg-d139d2b5",
+            "SecurityGroupRuleId": "sgr-044f1d23af0bc744b",
+            "GroupId": "sg-00bfce64775b85a38",
             "GroupOwnerId": "215043083621",
             "IsEgress": false,
             "IpProtocol": "tcp",
-            "FromPort": 3306,
-            "ToPort": 3306,
-            "CidrIpv4": "187.44.84.186/32"
+            "FromPort": 22,
+            "ToPort": 22,
+            "CidrIpv4": "187.113.229.247/32"
         }
     ]
 }

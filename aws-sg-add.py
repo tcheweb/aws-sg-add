@@ -40,11 +40,11 @@ print(f'SELECIONE A INSTÂNCIA QUE DESEJA LIBERAR ACESSO:')
 for cod, item in enumerate(instances['instances']):
     # Lista as instâncias
     print(f'[ {cod} ]  [{item["instance"]}]')
-print('[999]  [Sair]')
+#print('[999]  [Sair]')
 
 while True:
     try:
-        sg = int(input('Código da Instância: '))
+        sg = int(input('CÓDIGO DA INSTÃNCIA [999 sair]: '))
 
     except ValueError:
         print(f'ERRO! Digite um número!')
